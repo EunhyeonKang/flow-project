@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="extension">
+	<select id="selectExtension" parameterType="e" resultType="e">
+		select
+		*
+		from EXTENSION_INFO
+	</select>
+	<select id="ExtensionNameCheck" parameterType="string"
+		resultType="e">
+		select
+		*
+		from
+		EXTENSION_INFO
+		where ex_name=#{fileExtension}
+	</select>
+
+	<select id="selectByName" parameterType="String" resultType="e">
+		SELECT
+		*
+		from EXTENSION_INFO
+		WHERE ex_name = #{ex_name}
+	</select>
+
+	<select id="CustomCheck" parameterType="String" resultType="int">
+		select count(*) from EXTENSION_INFO
+		where ex_name = #{customExtension}
+	</select>
+	<insert id="InsertExtension" parameterType="String"
+		useGeneratedKeys="true" keyProperty="ex_name" keyColumn="ex_name">
+		insert into
+		EXTENSION_INFO values
+		(extension_seq.nextval,#{ex_type},#{ex_name},1)
+	</insert>
+	<update id="UpdateExtension" parameterType="map">
+		update EXTENSION_INFO
+		set
+		ex_status=#{tmp}
+		where ex_name = #{checkCur}
+	</update>
+	<delete id="DeleteExtension">
+		DELETE FROM EXTENSION_INFO
+		WHERE ex_name =
+		#{deleteVal}
+	</delete>
+</mapper>

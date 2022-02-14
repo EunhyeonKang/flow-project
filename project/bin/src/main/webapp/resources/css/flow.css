@@ -1,0 +1,110 @@
+@charset "UTF-8";
+#files{
+	float:right;
+}
+#checkCustom>span>input{
+	margin:12px;	
+	    width: 40%;
+    padding: 4px;
+}
+#customs{
+	margin:10px;
+	display: inline-block;
+    border: 2px solid black;
+    width: 18%;
+    padding: 5px;
+    border-radius: 5px;
+    color: #808080;
+    text-align: center;
+}
+#xButton{
+	border: 0;
+    outline: 0;
+    background-color: #ffff;
+    font-weight: 700;
+    font-size: initial; 
+}
+#customCount{
+	display: block;
+	padding:5px;
+	font-weight :bolder;
+	color:#808080;
+}
+#textAreaCustom {
+	padding : 10px;
+	width: 75%;
+	float: right;
+	height: 250px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: white;
+}
+
+#checkCustom {
+	width: 100%;
+}
+
+#container {
+	width: 800px;
+	margin: 10px auto;
+	padding: 20px;
+}
+
+#header {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#content {
+	padding: 10px;
+	margin-bottom: 20px;
+	height: 500px;
+}
+
+#footer {
+	clear: both;
+	padding: 20px;
+}
+
+@media ( max-width : 480px ) {
+	#container {
+		width: auto;
+	}
+	#content {
+		float: none;
+		width: auto;
+	}
+	#header {
+		float: none;
+		width: auto;
+	}
+}
+
+#content>div {
+	width: 75%;
+	margin: 0 auto;
+}
+
+#text>div {
+	margin: 10px;
+	height: 30px;
+}
+
+#text>div>span:nth-child(1) {
+	width: 20%;
+	float: left;
+}
+
+#text>div>span:nth-child(2) {
+	float: left;
+}
+
+input {
+	margin: 5px;
+}
+
+textarea {
+	resize: none;
+	width: 100%;
+	height: 200px;
+}
